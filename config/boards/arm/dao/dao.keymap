@@ -71,6 +71,7 @@
         };
     };
 };
+
 / {
         keymap {
                 compatible = "zmk,keymap";
