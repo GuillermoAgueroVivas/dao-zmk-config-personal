@@ -5,22 +5,22 @@
  */
 
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/mouse.h>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/mouse.h>
+
+#include <dt-bindings/zmk/ext_power.h>
 
 #define DEF 0
 #define LWR 1
 #define RSE 2
 #define ADJ 3
 
-&lt {
-    quick_tap_ms = <220>;
-};
+/* Adding Mouse */
+#include "dao.dtsi"
 
-&mt {
-    quick_tap_ms = <220>;
-};
+&lt { quick_tap_ms = <220>; };
+&mt { quick_tap_ms = <220>; };
 
 / {
     macros {
@@ -57,17 +57,17 @@
 };
 
 / {
-    keymap {
-        compatible = "zmk,keymap";
+        keymap {
+                compatible = "zmk,keymap";
 
-        default_layer {
-            bindings = <
-&mt LWIN RBKT    &kp Q  &kp W  &kp E      &kp R            &kp T      &kp Y      &kp U           &kp I      &kp O    &kp P     &mt RWIN LBKT
-&mt LCTRL GRAVE  &kp A  &kp S  &kp D      &kp F            &kp G      &kp H      &kp J           &kp K      &kp L    &kp SEMI  &mt RCTRL SQT
-&mt LALT BSLH    &kp Z  &kp X  &kp C      &kp V            &kp B      &kp N      &kp M           &kp COMMA  &kp DOT  &kp FSLH  &mt RALT MINUS
-                               &lt 2 TAB  &mt LSHFT SPACE  &lt 1 RET  &lt 1 ESC  &mt RSHFT BSPC  &lt 2 DEL
-            >;
-        };
+                default_layer {
+                        bindings = <
+  &mt LWIN RBKT   &kp Q &kp W &kp E &kp R &kp T               &kp Y  &kp U  &kp I     &kp O   &kp P    &mt RWIN LBKT 
+  &mt LCTRL GRAVE &kp A &kp S &kp D &kp F &kp G               &kp H  &kp J  &kp K     &kp L   &kp SEMI &mt RCTRL SQT
+  &mt LALT  BSLH  &kp Z &kp X &kp C &kp V &kp B               &kp N  &kp M  &kp COMMA &kp DOT &kp FSLH &mt RALT MINUS
+        &lt RSE TAB &mt LSHFT SPACE &lt LWR RET               &lt LWR ESC &mt RSHFT BSPC &lt RSE DEL
+                        >;
+                };
 
         lower_layer {
             bindings = <
@@ -89,8 +89,8 @@
 
         adjust_layer {
             bindings = <
-&bootloader  &none       &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &mwh SCROLL_UP    &mwh SCROLL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &none  &bootloader
-&none        &none       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &mwh SCROLL_DOWN  &mwh SCROLL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &bt BT_DISC 0
+&bootloader  &none       U_BTN1          U_MS_U          U_BTN2           U_WH_U            U_WH_U            U_BTN1          U_MS_U          U_BTN2           &none  &bootloader
+&none        &none       U_MS_L          U_MS_D          U_MS_R           U_WH_D            U_WH_D            U_MS_L          U_MS_D          U_MS_R           &none  &bt BT_DISC 0
 &none        &kp KP_NUM  &none           &none           &none            &none             &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &none  &bt BT_CLR
                                          &trans          &none            &trans            &trans            &none           &trans
             >;
