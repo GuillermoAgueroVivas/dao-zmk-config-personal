@@ -16,29 +16,8 @@
 #define RSE 2
 #define ADJ 3
 
-#undef U_MOUSE_MOVE_MAX
-#undef U_MOUSE_SCROLL_MAX
-
-#define U_MOUSE_MOVE_MAX 800
-#define U_MOUSE_SCROLL_MAX 35
-
-#undef MOVE_UP
-#undef MOVE_DOWN
-#undef MOVE_LEFT
-#undef MOVE_RIGHT
-#define MOVE_UP MOVE_Y(-U_MOUSE_MOVE_MAX)
-#define MOVE_DOWN MOVE_Y(U_MOUSE_MOVE_MAX)
-#define MOVE_LEFT MOVE_X(-U_MOUSE_MOVE_MAX)
-#define MOVE_RIGHT MOVE_X(U_MOUSE_MOVE_MAX)
-
-#undef SCROLL_UP
-#undef SCROLL_DOWN
-#undef SCROLL_LEFT
-#undef SCROLL_RIGHT
-#define SCROLL_UP SCRL_Y(U_MOUSE_SCROLL_MAX)
-#define SCROLL_DOWN SCRL_Y(-U_MOUSE_SCROLL_MAX)
-#define SCROLL_LEFT SCRL_X(-U_MOUSE_SCROLL_MAX)
-#define SCROLL_RIGHT SCRL_X(U_MOUSE_SCROLL_MAX)
+/* Adding Mouse */
+#include "dao.dtsi"
 
 &lt { quick_tap_ms = <220>; };
 &mt { quick_tap_ms = <220>; };
@@ -98,15 +77,15 @@
                         bindings = <
 &kp LWIN   &kp C_VOL_UP   &kp PG_UP  &kp C_PP       &kp HOME &kp C_PAUSE   &kp N0      &kp HOME  &kp C_PP    &kp PG_UP  &kp C_VOL_UP  &kp RWIN
 &kp LCTRL  &kp C_VOL_DN   &kp LEFT   &kp UP         &kp DOWN &kp RIGHT     &kp LEFT    &kp DOWN  &kp UP      &kp RIGHT  &kp C_VOL_DN  &kp RCTRL 
-&kp LALT   &kp C_MUTE     &kp PG_DN  &kp LG(LS(S))  &kp END  &kp C_PLAY    &kp N0      &kp END   &grtsgn      &kp PG_DN  &kp C_MUTE    &kp RALT
+&kp LALT   &kp C_MUTE     &kp PG_DN  &kp LG(LS(S))  &kp END  &kp C_PLAY    &kp N0      &kp END   &grtsgn     &kp PG_DN  &kp C_MUTE    &kp RALT
                           &trans     &trans         &lt ADJ RET            &lt ADJ ESC &trans    &trans
                         >; 
                 };
 
                 adjust_layer {
             bindings = <
-&bootloader  &none       &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &msc SCROLL_UP    &msc SCROLL_UP    &mkp LCLK       &mmv MOVE_UP    &mkp RCLK        &none  &bootloader
-&none        &none       &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCROLL_DOWN  &msc SCROLL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &none  &bt BT_DISC 0
+&bootloader  &none       U_BTN1          U_MS_U          U_BTN2           U_WH_U            U_WH_U            U_BTN1          U_MS_U          U_BTN2           &none  &bootloader
+&none        &none       U_MS_L          U_MS_D          U_MS_R           U_WH_D            U_WH_D            U_MS_L          U_MS_D          U_MS_R           &none  &bt BT_DISC 0
 &none        &kp KP_NUM  &none           &none           &none            &none             &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &none  &bt BT_CLR
                                          &trans          &none            &trans            &trans            &none           &trans
             >;
