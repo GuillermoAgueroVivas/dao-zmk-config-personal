@@ -64,7 +64,7 @@
                         >;
                 };
 
-                 lower_layer {
+        lower_layer {
             bindings = <
 &mt LWIN CAPS    &kp KP_MULTIPLY  &kp N7  &kp N8     &kp N9  &kp PLUS   &kp EXCL       &kp AT    &kp HASH   &kp DLLR  &kp PRCNT  &mt RWIN F1
 &mt LCTRL K_APP  &kp KP_SLASH     &kp N4  &kp N5     &kp N6  &kp MINUS  &kp CARET      &kp AMPS  &kp STAR   &kp LPAR  &kp RPAR   &mt RCTRL F2
@@ -82,8 +82,7 @@
             >;
         };
 
-
-                adjust_layer {
+        adjust_layer {
             bindings = <
 &bootloader  &none       U_BTN1          U_MS_U          U_BTN2           U_WH_U            U_WH_U            U_BTN1          U_MS_U          U_BTN2           &none  &bootloader
 &none        &none       U_MS_L          U_MS_D          U_MS_R           U_WH_D            U_WH_D            U_MS_L          U_MS_D          U_MS_R           &none  &bt BT_DISC 0
