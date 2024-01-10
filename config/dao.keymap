@@ -17,7 +17,7 @@
 /* #define ADJ 3 */
 
 /* Adding Mouse */
-#include "config/dao.dtsi"
+#include "mouse.dtsi"
 
 &lt { quick_tap_ms = <220>; };
 &mt { quick_tap_ms = <220>; };
