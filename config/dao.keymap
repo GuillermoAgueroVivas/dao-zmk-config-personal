@@ -92,7 +92,7 @@
 &bootloader  &none       U_BTN1          U_MS_U          U_BTN2           U_WH_U            U_WH_U            U_BTN1          U_MS_U          U_BTN2           &none  &bootloader
 &none        &none       U_MS_L          U_MS_D          U_MS_R           U_WH_D            U_WH_D            U_MS_L          U_MS_D          U_MS_R           &none  &bt BT_DISC 0
 &none        &kp KP_NUM  &none           &none           &none            &none             &bt BT_SEL 0      &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3     &none  &bt BT_CLR
-                                         &trans          &none            &trans            &trans            &none           &trans
+                                         &trans          &kp LS(U_BTN1)   &trans            &trans            &kp LS(U_BTN1)  &trans
             >;
         };
     };
