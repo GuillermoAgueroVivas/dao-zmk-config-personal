@@ -94,7 +94,7 @@
 &kp LWIN   &kp PG_DN    &kp PG_UP  &kp UP_ARROW  &kp HOME   &kp END       &kp C_VOL_UP       &kp HOME  &kp UP            &kp PG_UP  &kp C_PP    &kp RWIN
 &kp LALT   &kp C_PLAY   &kp LEFT   &kp DOWN      &kp RIGHT  &kp C_VOL_UP  &kp C_VOLUME_DOWN  &kp LEFT  &kp DOWN          &kp RIGHT  &kp C_PLAY  &kp RALT
 &kp LCTRL  &kp C_PAUSE  &kp C_PP   &kp LG(LALT)  &kp C_MUTE &kp C_VOL_DN  &kp N0             &kp END   &kp LS(LEFT_WIN)  &kp PG_DN  &kp C_MUTE  &kp RCTRL
-                                   &trans        &trans     &lt 3 RET     &lt 3 ESC          &trans    &trans;
+                                   &trans        &trans     &lt 3 RET     &lt 3 ESC          &trans    &trans
             >;
         };
 
