@@ -14,12 +14,12 @@
 
 &msc {
   // acceleration-exponent = <1>; 0
-  time-to-max-speed-ms = <4000>; // 40 - Used to be 5000
+  // time-to-max-speed-ms = <4000>; 40 - Used to be 5000
   delay-ms = <0>;                   // 10
 };
 
 #define U_MOUSE_MOVE_MAX 3750       // 600 - Was 1250
-#define U_MOUSE_SCROLL_MAX 100      // 10
+#define U_MOUSE_SCROLL_MAX 75      // 10
 
 #undef MOVE_UP
 #undef MOVE_DOWN
