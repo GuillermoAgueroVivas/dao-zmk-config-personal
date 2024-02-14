@@ -102,7 +102,7 @@
             bindings = <
 &sys_reset   &none       U_BTN1          U_MS_U          U_BTN2          U_WH_U            &none             &click_shift    U_MS_U          U_BTN2           &none          &none
 &none        &none       U_MS_L          U_MS_D          U_MS_R          U_WH_D            &none             U_MS_L          U_MS_D          U_MS_R           U_BTN2         &none
-&none        &kp KP_NUM  &none           &none           &none           &none             &none             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_DISC 0    &bt BT_DISC 1  &bt BT_CLR
+&none        &kp KP_NUM  &none           &none           &none           &none             &none             &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_DISC 0    &bt BT_DISC 1  &bt BT_CLR_ALL
                                          &trans          &none           &trans            &trans            &none           &trans
             >;
         };
