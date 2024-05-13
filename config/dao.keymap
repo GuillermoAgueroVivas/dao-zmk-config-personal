@@ -40,11 +40,11 @@
             tap-ms = <40>;
             bindings =
                 <&macro_press>,
-                <&kp LA>,
+                <&kp LALT>,
                 <&macro_tap>,
                 <&kp KP_N6 &kp KP_N2>,
                 <&macro_release>,
-                <&kp LA>;
+                <&kp LALT>;
         };
         click_shift: click_shift {
             compatible = "zmk,behavior-macro";
