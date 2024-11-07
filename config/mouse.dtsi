@@ -14,7 +14,7 @@
 
 &msc {
   // acceleration-exponent = <1>; 0
-  // time-to-max-speed-ms = <6000>; 40 - Used to be 5000
+  // time-to-max-speed-ms = <8000>; 40 - Used to be 5000
   delay-ms = <0>;                   // 10
 };
 
